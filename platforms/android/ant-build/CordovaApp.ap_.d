@@ -40,6 +40,7 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/topcoat \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/cordova.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/about.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/plugins/org.apache.cordova.dialogs \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/plugins/org.apache.cordova.device \
@@ -57,7 +58,8 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/adapters \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/utils/templates.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/views/EmployeeListView.js \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/views/HomeView.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/views/HeaderView.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/views/AboutView.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/models/EmployeeModel.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/routers/AppRouter.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/adapters/memory-adapter.js \
@@ -171,7 +173,9 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/topcoat/img/dark-combo-box-bg2x.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/topcoat/img/drop-down-triangle.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/topcoat/img/checkmark_bw.svg \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/AboutView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/EmployeeListItemView.html \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/HeaderView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/HomeView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/James_King50.jpg \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/Eugene_Lee50.jpg \

@@ -5,7 +5,7 @@ app.adapters.employee = (function () {
     var findById = function (id) {
 
             var deferred = $.Deferred(),
-                employees = JSON.parse(window.localStorage.getItem("employees")),
+                employees = JSON.parse(window.localStorage.getItem("favourites")),
                 employee = null,
                 l = employees.length;
 
@@ -23,7 +23,7 @@ app.adapters.employee = (function () {
         findByName = function (searchKey) {
             var searchKey = "imgur";
             var deferred = $.Deferred(),
-                employees = JSON.parse(window.localStorage.getItem("employees")),
+                employees = JSON.parse(window.localStorage.getItem("favourites")),
                 results = employees.filter(function (element) {
                     var fullName = element.data.domain;
                     return fullName.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
@@ -34,7 +34,7 @@ app.adapters.employee = (function () {
 
         findByManager = function (managerId) {
             var deferred = $.Deferred(),
-                employees = JSON.parse(window.localStorage.getItem("employees")),
+                employees = JSON.parse(window.localStorage.getItem("favourites")),
                 results = employees.filter(function (element) {
                     return managerId === element.managerId;
                 });

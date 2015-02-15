@@ -8,6 +8,7 @@ app.views.EmployeeListView = Backbone.View.extend({
         this.model.on("add", function (employee) {
             self.$el.append(new app.views.EmployeeListItemView({model:employee}).render().el);
         });
+        this.model = new app.models.EmployeeCollection();
     },
 
     render:function () {
@@ -15,6 +16,7 @@ app.views.EmployeeListView = Backbone.View.extend({
         _.each(this.model.models, function (employee) {
             this.$el.append(new app.views.EmployeeListItemView({model:employee}).render().el);
         }, this);
+        $('.scroller').append(this.el);
         return this;
     }
 });
@@ -25,6 +27,10 @@ app.views.EmployeeListItemView = Backbone.View.extend({
 
     className:"row",
 
+    events: {
+            "click .favourite-action": "addItem"
+            },
+
     initialize:function () {
         this.model.on("change", this.render, this);
         this.model.on("destroy", this.close, this);
@@ -33,6 +39,10 @@ app.views.EmployeeListItemView = Backbone.View.extend({
     render:function () {
         this.$el.html(this.template(this.model.attributes));
         return this;
+    },
+
+    addItem:function () {
+        console.log(this.model);
     }
 
 });
