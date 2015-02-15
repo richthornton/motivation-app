@@ -7,7 +7,6 @@ var app = {
 };
 
 $(document).on("ready", function () {
-    app.router = new app.routers.AppRouter();
     app.utils.templates.load(["HeaderView", "EmployeeListItemView", "AboutView" ],
         function () {
             app.router = new app.routers.AppRouter();

@@ -39,6 +39,7 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/css \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/topcoat \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/cordova.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/about.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics \
@@ -177,6 +178,12 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/EmployeeListItemView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/HeaderView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/HomeView.html \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r/jquery.p2r.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r/bower.json \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r/pulltorefresh.jquery.json \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r/jquery.p2r.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r/README.md \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/jquery-p2r/LICENSE \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/James_King50.jpg \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/Eugene_Lee50.jpg \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/Paula_Gates50.jpg \

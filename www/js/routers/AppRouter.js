@@ -16,6 +16,8 @@ app.routers.AppRouter = Backbone.Router.extend({
         $( document ).ready(function(){
             $(".button-collapse").sideNav();
         }) 
+
+
     },
 
     home: function () {
