@@ -15,15 +15,6 @@ app.routers.AppRouter = Backbone.Router.extend({
 
         $( document ).ready(function(){
             $(".button-collapse").sideNav();
-            $(".scroller").pullToRefresh();
-
-            $(".p2r")
-                .on("move.pulltorefresh", function (e, p){
-                    $(this).html("Move ! (" + p+")")
-                })
-                  .on("end.pulltorefresh", function (){
-                    $(this).html("Pull me")
-                  })
         }) 
 
 

@@ -11,6 +11,10 @@ app.views.EmployeeListView = Backbone.View.extend({
         });
         this.model = new app.models.EmployeeCollection();
         $(window).scroll(this.checkScroll);
+
+        WebPullToRefresh.init( {
+            loadingFunction: this.exampleLoadingFunction
+        } );
     },
 
     render:function () {
@@ -20,6 +24,29 @@ app.views.EmployeeListView = Backbone.View.extend({
         }, this);
         $('.scroller').append(this.el);
         return this;
+    },
+
+        // Just an example loading function that returns a
+    // promise that WebPullToRefresh can use.
+    exampleLoadingFunction: function() {
+
+        //var self = this;
+        return new Promise( function( resolve, reject ) {
+            // Run some async loading code here
+            // theScope.model.fetch({data: 1, 
+            //     complete: (function (e) {
+            //         var requestComplete = true;
+            //     }) 
+            // });
+
+             var routerReturned = app.router.navigate('home', {trigger: true});
+
+            if ( routerReturned /* if the loading worked */ ) {
+                resolve();
+            } else {
+                reject();
+            }
+        } );
     },
 
     loadResults: function () {
@@ -34,15 +61,16 @@ app.views.EmployeeListView = Backbone.View.extend({
         var triggerPoint = 100; // 100px from the bottom
         var self = this;
 
-        // document.body.scrollTop alone should do the job but that actually works only in case of Chrome.
-        // With IE and Firefox it also works sometimes (seemingly with very simple pages where you have
-        // only a <pre> or something like that) but I don't know when. This hack seems to work always.
-        var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        // // document.body.scrollTop alone should do the job but that actually works only in case of Chrome.
+        // // With IE and Firefox it also works sometimes (seemingly with very simple pages where you have
+        // // only a <pre> or something like that) but I don't know when. This hack seems to work always.
+        // var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
-        // >= is needed because if the horizontal scrollbar is visible then window.innerHeight includes
-        // it and in that case the left side of the equation is somewhat greater.
-        var scrolledToBottom = (scrollTop + window.innerHeight) >= document.documentElement.scrollHeight;
+        // // >= is needed because if the horizontal scrollbar is visible then window.innerHeight includes
+        // // it and in that case the left side of the equation is somewhat greater.
+        // var scrolledToBottom = (scrollTop + window.innerHeight) >= document.documentElement.scrollHeight;
 
+        var scrolledToBottom = $(window).scrollTop() + $(window).height() == $(document).height();
 
         if( scrolledToBottom === true) {
           self.loadResults();

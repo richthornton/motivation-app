@@ -2,6 +2,7 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     routes: {
         ""     : "home",
+        "home" : "home",
         "about": "about",
         "favourite": "favourite"
     },
@@ -34,6 +35,7 @@ app.routers.AppRouter = Backbone.Router.extend({
             model: new app.models.EmployeeCollection()
         });
         app.employeeListView.render();
+        return true;
     },
 
     favourite: function () {

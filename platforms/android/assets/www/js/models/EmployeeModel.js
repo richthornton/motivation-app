@@ -20,13 +20,32 @@ app.models.EmployeeCollection = Backbone.Collection.extend({
 
     initialize: function() { 
         var self = this;
-        var fullurl = "https://www.reddit.com/r/GetMotivated/.json";
-        $.getJSON(fullurl, function(json){
+        this.lastId = undefined;
+        this.fetch();
+    },
+
+    //set params to 1 if you want the first page of results
+    fetch: function(params){
+        var self = this;
+        if (this.lastId && !params) {
+            params = {
+                after: 't3_' + this.lastId
+            }
+        }
+        params = params || {};
+        if (params === 1){
+            params = {};
+        }
+        $.getJSON("http://www.reddit.com/r/GetMotivated/.json?jsonp=?", params, function (json) {
             var listing = json.data.children;
             this.listing = listing;
-            self.set(self.parse(listing));
+            self.add(self.parse(listing));
+            if (listing && listing.length > 0) {
+                self.lastId = listing[listing.length - 1].data.id;
+            } else {
+                self.lastId = undefined;
+            }
         });
-
     },
 
     sync: function(method, model, options) {

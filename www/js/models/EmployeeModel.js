@@ -24,15 +24,18 @@ app.models.EmployeeCollection = Backbone.Collection.extend({
         this.fetch();
     },
 
-    fetch: function(){
+    //set params to 1 if you want the first page of results
+    fetch: function(params){
         var self = this;
-        var params;
-        if (this.lastId) {
+        if (this.lastId && !params) {
             params = {
                 after: 't3_' + this.lastId
             }
         }
         params = params || {};
+        if (params === 1){
+            params = {};
+        }
         $.getJSON("http://www.reddit.com/r/GetMotivated/.json?jsonp=?", params, function (json) {
             var listing = json.data.children;
             this.listing = listing;
