@@ -12,11 +12,9 @@ app.views.EmployeeListView = Backbone.View.extend({
         this.model = new app.models.EmployeeCollection();
         $(window).scroll(this.checkScroll);
 
-        window.onload = function() {
-            WebPullToRefresh.init( {
-                loadingFunction: exampleLoadingFunction
-            } );
-        };
+        WebPullToRefresh.init( {
+            loadingFunction: this.exampleLoadingFunction
+        } );
     },
 
     render:function () {
@@ -31,10 +29,19 @@ app.views.EmployeeListView = Backbone.View.extend({
         // Just an example loading function that returns a
     // promise that WebPullToRefresh can use.
     exampleLoadingFunction: function() {
+
+        //var self = this;
         return new Promise( function( resolve, reject ) {
             // Run some async loading code here
-            this.model.fetch(1); 
-            if ( true /* if the loading worked */ ) {
+            // theScope.model.fetch({data: 1, 
+            //     complete: (function (e) {
+            //         var requestComplete = true;
+            //     }) 
+            // });
+
+             var routerReturned = app.router.navigate('home', {trigger: true});
+
+            if ( routerReturned /* if the loading worked */ ) {
                 resolve();
             } else {
                 reject();

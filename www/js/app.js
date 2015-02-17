@@ -14,23 +14,23 @@ $(document).on("ready", function () {
         });
 });
 
-window.onload = function() {
-    WebPullToRefresh.init( {
-        loadingFunction: exampleLoadingFunction
-    } );
-};
+// window.onload = function() {
+//     WebPullToRefresh.init( {
+//         loadingFunction: exampleLoadingFunction
+//     } );
+// };
 
-// Just an example loading function that returns a
-// promise that WebPullToRefresh can use.
-var exampleLoadingFunction = function() {
-    return new Promise( function( resolve, reject ) {
-        // Run some async loading code here
-        var routerReturned = app.router.navigate('home', {trigger: true});
+// // Just an example loading function that returns a
+// // promise that WebPullToRefresh can use.
+// var exampleLoadingFunction = function() {
+//     return new Promise( function( resolve, reject ) {
+//         // Run some async loading code here
+//         var routerReturned = app.router.navigate('home', {trigger: true});
 
-        if ( routerReturned /* if the loading worked */ ) {
-            resolve();
-        } else {
-            reject();
-        }
-    } );
-};
+//         if ( routerReturned /* if the loading worked */ ) {
+//             resolve();
+//         } else {
+//             reject();
+//         }
+//     } );
+// };

@@ -22,15 +22,9 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     home: function () {
-        // // Since the home view never changes, we instantiate it and render it only once
-        // if (!app.homeView) {
-        //     app.headerView = new app.views.HeaderView();
-        //     app.headerView.render();
-        // } else {
-        //     console.log('reusing home view');
-        //     app.headerView.delegateEvents(); // delegate events when the view is recycled
-        // }
-        // app.slider.slidePage(app.headerView.$el);
+        if (app.employeeListView) {
+            app.employeeListView.remove();
+        }
         app.employeeListView = new app.views.EmployeeListView({
             model: new app.models.EmployeeCollection()
         });
