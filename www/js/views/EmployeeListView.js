@@ -4,12 +4,13 @@ app.views.EmployeeListView = Backbone.View.extend({
 
     initialize:function () {
         var self = this;
-        this.model.on("reset", this.render, this);
-        this.model.on("add", function (employee) {
+        this.listenTo(this.model, "reset", this.render);
+        this.listenTo(this.model, "add", function (employee) {
+            console.log('model added');
             self.$el.append(new app.views.EmployeeListItemView({model:employee}).render().el);
+            self.setNewScrollFire();
         });
-        this.model = new app.models.EmployeeCollection();
-        //$(window).scroll(this.checkScroll);
+        this.lastVisibleModelId = undefined;
 
         var el = null
 
@@ -22,7 +23,23 @@ app.views.EmployeeListView = Backbone.View.extend({
         }, this);
         $('.scroller').empty();
         $('.scroller').append(this.el);
+        this.setNewScrollFire();
         return this;
+    },
+
+    setNewScrollFire:function (){
+        if (this.model.models.length > 0){
+            var newLastVisibleModelId = this.model.models[this.model.length - 1].attributes.data.id;
+            if (newLastVisibleModelId !== this.lastVisibleModelId){
+                this.lastVisibleModelId = newLastVisibleModelId;
+                console.log('The lastVisibleModelId is: ' + this.lastVisibleModelId);
+                var idName = '#' + this.lastVisibleModelId;
+                 var options = [
+                    {selector: idName, offset: 200, callback: 'app.employeeListView.model.fetch()' },
+                  ];
+                  scrollFire(options);
+            }
+        }
     }
 });
 
