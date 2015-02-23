@@ -4,7 +4,9 @@ app.views.HeaderView = Backbone.View.extend({
     },
 
     render: function () {
-        this.$el.html(this.template());
+    	var body = $('body');
+        var elements = this.$el.html(this.template());
+        body.append(elements);
         return this;
     }
 

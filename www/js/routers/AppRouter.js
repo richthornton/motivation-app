@@ -8,16 +8,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     initialize: function () {
-        app.slider = new PageSlider($('body'));
-
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
-        app.slider.slidePage(app.headerView.$el);
-
-        $( document ).ready(function(){
-            $(".button-collapse").sideNav();
-        }) 
-
 
     },
 
