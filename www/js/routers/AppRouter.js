@@ -17,6 +17,9 @@ app.routers.AppRouter = Backbone.Router.extend({
         if (app.postsListView) {
             app.postsListView.remove();
         }
+        if (app.favouritesListView) {
+            app.favouritesListView.remove();
+        }
         app.postsListView = new app.views.PostsListView({
             model: new app.models.PostsCollection()
         });
@@ -28,10 +31,25 @@ app.routers.AppRouter = Backbone.Router.extend({
         if (app.postsListView) {
             app.postsListView.remove();
         }
+        if (app.favouritesListView) {
+            app.favouritesListView.remove();
+        }
         app.favouritesListView = new app.views.FavouritesListView({
             model: app.models.favourites
         });
         app.favouritesListView.render();
+        return true;
+    },
+
+    about: function () {
+        if (app.postsListView) {
+            app.postsListView.remove();
+        }
+        if (app.favouritesListView) {
+            app.favouritesListView.remove();
+        }
+        app.aboutView = new app.views.AboutView();
+        app.aboutView.render();
         return true;
     }
 
