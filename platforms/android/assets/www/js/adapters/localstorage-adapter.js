@@ -1,30 +1,30 @@
-app.adapters.employee = (function () {
+app.adapters.posts = (function () {
 
     console.log("Loading localstorage adapter module");
 
     var findById = function (id) {
 
             var deferred = $.Deferred(),
-                employees = JSON.parse(window.localStorage.getItem("favourites")),
-                employee = null,
-                l = employees.length;
+                posts = JSON.parse(window.localStorage.getItem("favourites")),
+                post = null,
+                l = posts.length;
 
             for (var i = 0; i < l; i++) {
-                if (employees[i].id === id) {
-                    employee = employees[i];
+                if (posts[i].id === id) {
+                    post = posts[i];
                     break;
                 }
             }
 
-            deferred.resolve(employee);
+            deferred.resolve(post);
             return deferred.promise();
         },
 
         findByName = function (searchKey) {
             var searchKey = "imgur";
             var deferred = $.Deferred(),
-                employees = JSON.parse(window.localStorage.getItem("favourites")),
-                results = employees.filter(function (element) {
+                posts = JSON.parse(window.localStorage.getItem("favourites")),
+                results = posts.filter(function (element) {
                     var fullName = element.data.domain;
                     return fullName.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
                 });
@@ -34,8 +34,8 @@ app.adapters.employee = (function () {
 
         findByManager = function (managerId) {
             var deferred = $.Deferred(),
-                employees = JSON.parse(window.localStorage.getItem("favourites")),
-                results = employees.filter(function (element) {
+                posts = JSON.parse(window.localStorage.getItem("favourites")),
+                results = posts.filter(function (element) {
                     return managerId === element.managerId;
                 });
             deferred.resolve(results);
@@ -45,11 +45,11 @@ app.adapters.employee = (function () {
         // var fullurl = "https://www.reddit.com/r/GetMotivated.json";
         // $.getJSON(fullurl, function(json){
         //     var listing = json.data.children;
-        //     window.localstorage.setItem("employees", JSON.stringify(listing));
+        //     window.localstorage.setItem("posts", JSON.stringify(listing));
         // });
 
     // // Store sample data in Local Storage
-    // window.localStorage.setItem("employees", JSON.stringify(
+    // window.localStorage.setItem("posts", JSON.stringify(
     //     [
     //         {"id": 1, "firstName": "James", "lastName": "King", "managerId": 0, "managerName": "", "reports": 4, "title": "President and CEO", "department": "Corporate", "cellPhone": "617-000-0001", "officePhone": "781-000-0001", "email": "jking@fakemail.com", "city": "Boston, MA", "pic": "james_king.jpg", "twitterId": "@fakejking", "blog": "http://coenraets.org"},
     //         {"id": 2, "firstName": "Julie", "lastName": "Taylor", "managerId": 1, "managerName": "James King", "reports": 2, "title": "VP of Marketing", "department": "Marketing", "cellPhone": "617-000-0002", "officePhone": "781-000-0002", "email": "jtaylor@fakemail.com", "city": "Boston, MA", "pic": "julie_taylor.jpg", "twitterId": "@fakejtaylor", "blog": "http://coenraets.org"},

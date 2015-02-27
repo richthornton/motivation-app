@@ -8,12 +8,14 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     initialize: function () {
+        app.models.favourites = new app.models.FavouritesCollection();
+        app.models.favourites.fetch();
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
-        app.models.favourites = new app.models.FavouritesCollection();
     },
 
     home: function () {
+        
         if (app.postsListView) {
             app.postsListView.remove();
         }

@@ -4,36 +4,54 @@ app.routers.AppRouter = Backbone.Router.extend({
         ""     : "home",
         "home" : "home",
         "about": "about",
-        "favourite": "favourite"
+        "favourites": "favourites"
     },
 
     initialize: function () {
-        app.slider = new PageSlider($('body'));
-
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
-        app.slider.slidePage(app.headerView.$el);
-
-        $( document ).ready(function(){
-            $(".button-collapse").sideNav();
-        }) 
-
-
+        app.models.favourites = new app.models.FavouritesCollection();
     },
 
     home: function () {
-        if (app.employeeListView) {
-            app.employeeListView.remove();
+        
+        if (app.postsListView) {
+            app.postsListView.remove();
         }
-        app.employeeListView = new app.views.EmployeeListView({
-            model: new app.models.EmployeeCollection()
+        if (app.favouritesListView) {
+            app.favouritesListView.remove();
+        }
+        app.postsListView = new app.views.PostsListView({
+            model: new app.models.PostsCollection()
         });
-        app.employeeListView.render();
+        app.postsListView.render();
         return true;
     },
 
-    favourite: function () {
-        
+    favourites: function () {
+        if (app.postsListView) {
+            app.postsListView.remove();
+        }
+        if (app.favouritesListView) {
+            app.favouritesListView.remove();
+        }
+        app.favouritesListView = new app.views.FavouritesListView({
+            model: app.models.favourites
+        });
+        app.favouritesListView.render();
+        return true;
+    },
+
+    about: function () {
+        if (app.postsListView) {
+            app.postsListView.remove();
+        }
+        if (app.favouritesListView) {
+            app.favouritesListView.remove();
+        }
+        app.aboutView = new app.views.AboutView();
+        app.aboutView.render();
+        return true;
     }
 
 });
