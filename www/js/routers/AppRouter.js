@@ -3,7 +3,7 @@ app.routers.AppRouter = Backbone.Router.extend({
     routes: {
         ""     : "home",
         "home" : "home",
-        "about": "about",
+        //"about": "about",
         "favourites": "favourites"
     },
 
@@ -15,8 +15,11 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     home: function () {
-        $('.brand-logo').text('GetMotivated');
+        $('.brand-logo').text('Home');
         $('.refresh-from-navbar').show();
+        var toggleButton = $('.toggle-page > .mdi-action-home');
+        toggleButton.addClass('mdi-action-grade').removeClass('mdi-action-home');
+        $('.toggle-page').attr('href', '#favourites');
         if (app.postsListView) {
             app.postsListView.remove();
         }
@@ -33,6 +36,9 @@ app.routers.AppRouter = Backbone.Router.extend({
     favourites: function () {
         $('.brand-logo').text('Favourites');
         $('.refresh-from-navbar').hide();
+        var toggleButton = $('.toggle-page > .mdi-action-grade');
+        toggleButton.addClass('mdi-action-home').removeClass('mdi-action-grade');
+        $('.toggle-page').attr('href', '#home');
         if (app.postsListView) {
             app.postsListView.remove();
         }
