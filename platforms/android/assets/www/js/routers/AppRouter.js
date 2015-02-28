@@ -8,13 +8,15 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     initialize: function () {
+        app.models.favourites = new app.models.FavouritesCollection();
+        app.models.favourites.fetch();
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
-        app.models.favourites = new app.models.FavouritesCollection();
     },
 
     home: function () {
-        
+        $('.brand-logo').text('GetMotivated');
+        $('.refresh-from-navbar').show();
         if (app.postsListView) {
             app.postsListView.remove();
         }
@@ -29,6 +31,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     favourites: function () {
+        $('.brand-logo').text('Favourites');
+        $('.refresh-from-navbar').hide();
         if (app.postsListView) {
             app.postsListView.remove();
         }
@@ -43,6 +47,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     about: function () {
+        $('.brand-logo').text('About');
+        $('.refresh-from-navbar').hide();
         if (app.postsListView) {
             app.postsListView.remove();
         }

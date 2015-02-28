@@ -36,7 +36,6 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/cordova_plugins.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/materialize \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/index.html \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/xpull-master \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/css \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/cordova.js \
@@ -67,6 +66,7 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/adapters/memory-adapter.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/adapters/localstorage-adapter.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/pageslider.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/backbone.localstorage.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/underscore-min.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/jquery-1.9.1.min.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/backbone-min.js \
@@ -91,11 +91,6 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/materialize/font/roboto/Roboto-Thin.ttf \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/materialize/css/materialize.min.css \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/materialize/css/materialize.css \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/xpull-master/bower.json \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/xpull-master/xpull.js \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/xpull-master/xpull.css \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/xpull-master/README.md \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/xpull-master/LICENSE \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/css/pageslider.css \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/css/styles.css \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/css/images \
