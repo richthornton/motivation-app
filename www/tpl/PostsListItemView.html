@@ -1,0 +1,20 @@
+
+		<div class="col s12 m7">
+          <div id=<%= data.id %> class="card">
+            <div class="card-image">
+              <img src="<%= data.url %>">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <p><%= data.title %></p>
+            </div>
+            <div class="card-action-smaller card-action">
+            <% if (isFavourite === true) { %>
+              <a class="btn-floating btn-large grey"><i class="large mdi-action-done"></i></a>
+            <%  } else { %>
+              <a class="btn-floating btn-large waves-effect waves-light red favourite-action"><i class="large mdi-action-grade"></i></a>
+            <%  } %>
+
+            </div>
+          </div>
+        </div>      
