@@ -9,9 +9,22 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     initialize: function () {
         app.models.favourites = new app.models.FavouritesCollection();
-        app.models.favourites.fetch();
+        window.db = new ForerunnerDB();
+        window.db.collection('motivationFavourites').load(function (err) {
+            if (!err) {
+                app.models.favourites.fetch();
+            }
+        });
+
+        //app.models.favourites.fetch();
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
+
+        if (typeof String.prototype.endsWith !== 'function') {
+            String.prototype.endsWith = function(suffix) {
+                return this.indexOf(suffix, this.length - suffix.length) !== -1;
+            };
+        }
     },
 
     home: function () {

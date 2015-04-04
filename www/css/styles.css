@@ -2,6 +2,10 @@
     font-size: 2.1rem;
 }
 
+a, a:active, a:hover, a:visited {
+    outline: none;
+}
+
 .fixed-footer {
   position: fixed;
   bottom: 0;

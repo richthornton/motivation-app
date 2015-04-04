@@ -2,6 +2,7 @@
  : /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-port-ldpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-land-xhdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-ldpi/icon.png \
+/home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-xxxhdpi/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/values/strings.xml \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-land-ldpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-port-xhdpi/screen.png \
@@ -12,11 +13,13 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-land-hdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-hdpi/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-mdpi/icon.png \
+/home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-xxhdpi/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable-port-mdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/res/drawable/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-port-ldpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-land-xhdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-ldpi/icon.png \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-xxxhdpi/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-land-mdpi/screen.png \
@@ -25,6 +28,7 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-mdpi/icon.png \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-xxhdpi/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/res/drawable/icon.png \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/_where-is-www.txt \
@@ -38,6 +42,7 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/index.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/css \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/cordova.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/about.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics \
@@ -121,6 +126,18 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/PostsListItemView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/HeaderView.html \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/tpl/FavouritesListItemView.html \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-core+views.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-all.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-all.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-legacy.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-autobind.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-core.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-legacy.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-core+views.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-autobind.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-core.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-core+persist.min.js \
+/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/ForerunnerDB/fdb-core+persist.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/James_King50.jpg \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/Eugene_Lee50.jpg \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/pics/Paula_Gates50.jpg \

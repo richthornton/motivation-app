@@ -3,20 +3,31 @@ app.routers.AppRouter = Backbone.Router.extend({
     routes: {
         ""     : "home",
         "home" : "home",
-        "about": "about",
+        //"about": "about",
         "favourites": "favourites"
     },
 
     initialize: function () {
+        window.db = new ForerunnerDB();
+
         app.models.favourites = new app.models.FavouritesCollection();
         app.models.favourites.fetch();
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
+
+        if (typeof String.prototype.endsWith !== 'function') {
+            String.prototype.endsWith = function(suffix) {
+                return this.indexOf(suffix, this.length - suffix.length) !== -1;
+            };
+        }
     },
 
     home: function () {
-        $('.brand-logo').text('GetMotivated');
+        $('.brand-logo').text('Home');
         $('.refresh-from-navbar').show();
+        var toggleButton = $('.toggle-page > .mdi-action-home');
+        toggleButton.addClass('mdi-action-grade').removeClass('mdi-action-home');
+        $('.toggle-page').attr('href', '#favourites');
         if (app.postsListView) {
             app.postsListView.remove();
         }
@@ -33,6 +44,9 @@ app.routers.AppRouter = Backbone.Router.extend({
     favourites: function () {
         $('.brand-logo').text('Favourites');
         $('.refresh-from-navbar').hide();
+        var toggleButton = $('.toggle-page > .mdi-action-grade');
+        toggleButton.addClass('mdi-action-home').removeClass('mdi-action-grade');
+        $('.toggle-page').attr('href', '#home');
         if (app.postsListView) {
             app.postsListView.remove();
         }
