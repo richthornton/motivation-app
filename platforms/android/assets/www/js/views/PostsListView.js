@@ -4,6 +4,7 @@ app.views.PostsListView = Backbone.View.extend({
 
     initialize:function () {
         var self = this;
+        $('.preloader-wrapper').show();
         this.listenTo(this.model, "reset", this.render);
         this.listenTo(this.model, "add", function (post) {
             self.$el.append(new app.views.PostsListItemView({model:post}).render().el);

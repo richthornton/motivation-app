@@ -16,9 +16,10 @@ app.routers.AppRouter = Backbone.Router.extend({
             }
         });
 
-        //app.models.favourites.fetch();
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
+
+        app.models.posts = new app.models.PostsCollection();
 
         if (typeof String.prototype.endsWith !== 'function') {
             String.prototype.endsWith = function(suffix) {
@@ -39,8 +40,9 @@ app.routers.AppRouter = Backbone.Router.extend({
         if (app.favouritesListView) {
             app.favouritesListView.remove();
         }
+        app.models.posts.fetch(0);
         app.postsListView = new app.views.PostsListView({
-            model: new app.models.PostsCollection()
+            model: app.models.posts
         });
         app.postsListView.render();
         return true;

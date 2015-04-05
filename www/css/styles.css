@@ -6,6 +6,13 @@ a, a:active, a:hover, a:visited {
     outline: none;
 }
 
+.left > li:hover, 
+ .right > li:hover{
+  outline: none;
+  text-decoration: none;
+  background:none;
+}
+
 .fixed-footer {
   position: fixed;
   bottom: 0;
@@ -19,4 +26,13 @@ a, a:active, a:hover, a:visited {
 .card-action-smaller {
 	padding: 10px 20px 5px 20px !important;
 	text-align: right;
+}
+
+.preloader-wrapper {
+    /*margin: auto;*/
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
 }

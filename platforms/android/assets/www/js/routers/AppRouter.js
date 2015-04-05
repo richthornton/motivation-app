@@ -8,10 +8,15 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     initialize: function () {
-        window.db = new ForerunnerDB();
-
         app.models.favourites = new app.models.FavouritesCollection();
-        app.models.favourites.fetch();
+        window.db = new ForerunnerDB();
+        window.db.collection('motivationFavourites').load(function (err) {
+            if (!err) {
+                app.models.favourites.fetch();
+            }
+        });
+
+        //app.models.favourites.fetch();
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
 
