@@ -62,14 +62,31 @@ app.models.PostsCollection = Backbone.Collection.extend({
     parse: function(listing){
        // _.each(listing, function)
         var posts = _.filter(listing, function(post){ 
+            var checkingTrue = post.data.domain === ("i.imgur.com" || "imgur.com");
             //return post.data.domain === ("i.imgur.com" || "imgur.com"); 
             return (!post.data.over_18 && 
                 !post.data.url.endsWith('.gifv') &&
                 !post.data.url.endsWith('.gif') &&
                 (post.data.url.endsWith('.jpg') ||
                  post.data.url.endsWith('.png') ||
-                  post.data.domain === ("i.imgur.com" || "imgur.com")));
+                  post.data.domain === "i.imgur.com" ||
+                  post.data.domain === "imgur.com"));
         });
+        _.each(posts, function(post){
+            if(post.data.domain.indexOf('imgur') > -1){
+                //adding .jpg to imgur links with no extension
+                if (!post.data.url.endsWith('.jpg') || !post.data.url.endsWith('.png')){
+                    post.data.url = post.data.url + '.jpg';
+                }
+                var postURL = post.data.url;
+                var urlFirstSlashPosition = postURL.indexOf('/');
+                var urlLastSlashPosition = postURL.lastIndexOf('/');
+                //sorting out for the situations where the link is to a gallery
+                if (urlFirstSlashPosition !== urlLastSlashPosition){
+                    post.data.url = postURL.replace(postURL.substring(urlFirstSlashPosition, urlLastSlashPosition), "/imgur.com");
+                }
+            }
+        })
         return posts;
     }
 
