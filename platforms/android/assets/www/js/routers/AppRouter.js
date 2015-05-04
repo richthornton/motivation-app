@@ -3,7 +3,6 @@ app.routers.AppRouter = Backbone.Router.extend({
     routes: {
         ""     : "home",
         "home" : "home",
-        //"about": "about",
         "favourites": "favourites"
     },
 

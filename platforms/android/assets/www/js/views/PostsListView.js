@@ -93,6 +93,7 @@ app.views.PostsListItemView = Backbone.View.extend({
         db.collection('motivationFavourites').save();
 
         this.render();
+
     }
 
 });
