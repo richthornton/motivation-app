@@ -4,9 +4,10 @@
     <description>
         An app that shows motivational pictures.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author >
         Richard Thornton
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="Orientation" value="portrait" />
 </widget>

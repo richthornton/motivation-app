@@ -6,7 +6,7 @@ a, a:active, a:hover, a:visited {
     outline: none;
 }
 
-.left > li:active, 
+.left > li:hover, 
  .right > li:hover{
   outline: none;
   text-decoration: none;

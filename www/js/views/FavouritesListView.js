@@ -46,21 +46,22 @@ app.views.FavouritesListItemView = Backbone.View.extend({
     toastBeforeDeleting:function () {
         this.dontDelete = false;
         var theId = '#' + this.model.attributes.data.id;
-        toast('<span>Item Deleted </span><a class="waves-effect waves-light btn" onclick="$( \'.card\' ).show();"> Undo</a>', 4000,'',this.removeItemFromFavourites.bind(this));
+        toast('<span>Item Deleted </span><a class="waves-effect waves-light btn" onclick="$( \'.card\' ).show();"> Undo</a>', 3000,'',this.removeItemFromFavourites.bind(this));
         $(theId).hide();
     },
 
     removeItemFromFavourites:function () {
         var theId = '#' + this.model.attributes.data.id;
         if ($(theId).is(':hidden')) {
+            // Get the item id for the todo item clicked on
+            db.collection('motivationFavourites').remove({
+                _id: this.model.attributes._id
+            });
+            db.collection('motivationFavourites').save();
+
             //this will be removing an item from the favourites
             app.models.favourites.remove(this.model);
             this.model.save();
-
-            // Get the item id for the todo item clicked on
-            db.collection('motivationFavourites').remove(this.model);
-            db.collection('motivationFavourites').save();
-            //app.models.favourites.each(function (model) { model.save(); });
         }
         else {
             return;

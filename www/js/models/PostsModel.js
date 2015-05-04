@@ -74,6 +74,11 @@ app.models.PostsCollection = Backbone.Collection.extend({
         });
         _.each(posts, function(post){
             if(post.data.domain.indexOf('imgur') > -1){
+                //remove trailing slashes
+                if (post.data.url.endsWith('/')){
+                    var oldURL = post.data.url;
+                    post.data.url = oldURL.substring(0, oldURL.length - 1);
+                }
                 //adding .jpg to imgur links with no extension
                 if (!post.data.url.endsWith('.jpg') || !post.data.url.endsWith('.png')){
                     post.data.url = post.data.url + '.jpg';

@@ -16,7 +16,7 @@ app.views.FavouritesListView = Backbone.View.extend({
         $('.preloader-wrapper').hide();
         //var testDiv = $( 'div #content' );
         //$( 'div #content' ).scrollTop( 65 );
-        var body = $("body");
+        var body = $("window");
         var top = body.scrollTop(0);
         return this;
     }
