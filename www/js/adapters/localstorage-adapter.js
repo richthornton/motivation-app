@@ -1,6 +1,6 @@
 app.adapters.posts = (function () {
 
-    console.log("Loading localstorage adapter module");
+    
 
     var findById = function (id) {
 

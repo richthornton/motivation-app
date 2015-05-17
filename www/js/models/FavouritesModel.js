@@ -28,7 +28,6 @@ app.models.FavouritesCollection = Backbone.Collection.extend({
         // Ask forerunner to load any persistent data previously
         // saved for this collection
         var favouritesDB = db.collection('motivationFavourites');
-        console.log(favouritesDB);
         this.set(favouritesDB._data);
         
     }
