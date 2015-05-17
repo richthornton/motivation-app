@@ -36,32 +36,14 @@ app.models.PostsCollection = Backbone.Collection.extend({
         if (params === 1){
             params = {};
         }
-        // $.getJSON("http://www.reddit.com/r/GetMotivated/.json?jsonp=?", params)
-        //      .done(function( json ) {
-        //         console.log("json returned is:" + json);
-        //         var listing = json.data.children;
-        //         this.listing = listing;
-        //         self.add(self.parse(listing));
-        //         if (listing && listing.length > 0) {
-        //             self.lastId = listing[listing.length - 1].data.id;
-        //         } else {
-        //             self.lastId = undefined;
-        //         }
-        //      })
-        //      .fail(function( jqxhr, textStatus, error ) {
-        //         var err = textStatus + ", " + error;
-        //         console.log( "Request Failed: " + err );
-        //      });
         $.ajax({
             dataType: "json",
             url: "http://www.reddit.com/r/GetMotivated/.json?jsonp=?",
             data: params,
             success : function(){
-                console.log("success called")
             },
             timeout: 6000
         }).done(function( json ) {
-                console.log("json returned is:" + json);
                 var listing = json.data.children;
                 this.listing = listing;
                 self.add(self.parse(listing));
@@ -73,7 +55,6 @@ app.models.PostsCollection = Backbone.Collection.extend({
              })
              .fail(function( jqxhr, textStatus, error ) {
                 var err = textStatus + ", " + error;
-                console.log( "Request Failed: " + err );
                 if (textStatus == "timeout"){
                     toast("No internet connection, please check and try again", 6000);
                 }
