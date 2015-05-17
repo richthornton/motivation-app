@@ -72,7 +72,6 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/js/adapters/localstorage-adapter.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/pageslider.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/backbone.localstorage.js \
-/home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/parse-1.4.0.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/underscore-min.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/jquery-1.9.1.min.js \
 /home/richard/Documents/Cordova/workshop/platforms/android/assets/www/lib/backbone-min.js \

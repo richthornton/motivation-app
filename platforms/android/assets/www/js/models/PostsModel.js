@@ -36,8 +36,14 @@ app.models.PostsCollection = Backbone.Collection.extend({
         if (params === 1){
             params = {};
         }
-        $.getJSON("http://www.reddit.com/r/GetMotivated/.json?jsonp=?", params)
-             .done(function( json ) {
+        $.ajax({
+            dataType: "json",
+            url: "http://www.reddit.com/r/GetMotivated/.json?jsonp=?",
+            data: params,
+            success : function(){
+            },
+            timeout: 6000
+        }).done(function( json ) {
                 var listing = json.data.children;
                 this.listing = listing;
                 self.add(self.parse(listing));
@@ -49,7 +55,9 @@ app.models.PostsCollection = Backbone.Collection.extend({
              })
              .fail(function( jqxhr, textStatus, error ) {
                 var err = textStatus + ", " + error;
-                console.log( "Request Failed: " + err );
+                if (textStatus == "timeout"){
+                    toast("No internet connection", 120000);
+                }
              });
     },
 

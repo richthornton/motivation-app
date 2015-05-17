@@ -17,7 +17,8 @@ app.routers.AppRouter = Backbone.Router.extend({
 
         app.headerView = new app.views.HeaderView();
         app.headerView.render();
-
+        app.headerView.eulaAlreadyAccepted();
+        
         app.models.posts = new app.models.PostsCollection();
 
         if (typeof String.prototype.endsWith !== 'function') {

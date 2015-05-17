@@ -6,6 +6,13 @@
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richard/workshop/BuildConfig.class \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richard/workshop/R.class \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richard/workshop/R$drawable.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/CordovaApp.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/R$attr.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/R$string.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/R$xml.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/BuildConfig.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/R.class \
+/home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/com/richerdesigns/motivationhabitapp/R$drawable.class \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$4.class \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$2$1.class \
 /home/richard/Documents/Cordova/workshop/platforms/android/ant-build/classes/org/apache/cordova/dialogs/Notification$1.class \
