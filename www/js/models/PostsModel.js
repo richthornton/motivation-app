@@ -59,7 +59,7 @@ app.models.PostsCollection = Backbone.Collection.extend({
             success : function(){
                 console.log("success called")
             },
-            timeout: 2000
+            timeout: 6000
         }).done(function( json ) {
                 console.log("json returned is:" + json);
                 var listing = json.data.children;
