@@ -75,7 +75,7 @@ app.models.PostsCollection = Backbone.Collection.extend({
                 var err = textStatus + ", " + error;
                 console.log( "Request Failed: " + err );
                 if (textStatus == "timeout"){
-                    console.log("timeout");
+                    toast("No internet connection, please check and try again", 6000);
                 }
              });
     },
