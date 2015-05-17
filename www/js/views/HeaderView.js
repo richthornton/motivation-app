@@ -20,7 +20,7 @@ app.views.HeaderView = Backbone.View.extend({
         if (this.checkIfLocalStorageCompatible){
             eulaState = localStorage.getItem("eulaAccepted"); 
         }
-        if (eulaState === true){
+        if (eulaState === true || eulaState === "true"){
             return true;
         }
         else {
